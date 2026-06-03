@@ -1,0 +1,262 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    overflow:hidden;
+    background:#000;
+
+    width:100vw;
+    height:100vh;
+}
+
+/* 모든 화면 */
+
+.screen{
+    width:100vw;
+    height:100vh;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.hidden{
+    display:none;
+}
+
+/* 배경 이미지 */
+
+.bg{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+/* ---------- 메인 버튼 ---------- */
+
+.menuArea{
+    position:absolute;
+
+    left:11%;
+    bottom:8.5%;
+
+    width:20%;
+    height:16%;
+
+    z-index:99999;
+}
+
+.playBtn,
+.recordBtn,
+.rankBtn{
+    position:absolute;
+
+    left:60%;
+    width:100%;
+    height:26%;
+
+
+    border:none;
+    opacity:.4;
+}
+
+.playBtn{
+    top:-13%;
+    background:none;
+}
+
+.recordBtn{
+    top:32%;
+    background: none;
+}
+
+.rankBtn{
+    top:79%;
+    background: none;
+}
+
+/* ---------- 게임 ---------- */
+
+#timer{
+
+    font-size:120px;
+
+    color:white;
+
+    font-weight:bold;
+
+    margin-bottom:50px;
+}
+
+#stopBtn{
+
+    padding:20px 60px;
+
+    font-size:40px;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+}
+
+/* ---------- 결과 ---------- */
+
+#dollImage{
+    width:300px;
+}
+
+@keyframes drop{
+
+    from{
+        transform:translateY(-500px);
+    }
+
+    to{
+        transform:translateY(0);
+    }
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotateY(0deg);
+    }
+
+    to{
+        transform:rotateY(360deg);
+    }
+}
+
+#resultTitle{
+
+    color:white;
+
+    margin-top:20px;
+
+    font-size:50px;
+}
+
+#resultTime{
+
+    color:white;
+
+    font-size:30px;
+
+    margin:20px;
+}
+
+/* ---------- 기록 ---------- */
+
+#recordScreen,
+#rankingScreen{
+
+    color:white;
+
+    background:black;
+}
+
+#recordScreen input{
+
+    padding:10px;
+
+    font-size:24px;
+
+    margin:20px;
+}
+
+#recordList,
+#rankingList{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+    text-align:center;
+
+    line-height:1.8;
+}
+
+button{
+
+    padding:12px 25px;
+
+    margin:10px;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+.playBtn,
+.recordBtn,
+.rankBtn{
+    z-index:9999;
+}
+
+/* 이름 입력 화면 */
+
+#nicknameInput{
+    position:absolute;
+
+    left:17.5%;
+    top:60.4%;
+
+    width:66%;
+    height:6%;
+
+    z-index:1000;
+
+    font-size:20px;
+    text-align:center;
+
+    background:rgba(0,0,0,.3);
+    color:white;
+
+    border:none;
+    outline:none;
+}
+
+#startBtn{
+    position:absolute;
+
+    left:30%;
+    top:74%;
+
+    width:40%;
+    height:10%;
+
+    z-index:1000;
+
+    background:none;
+    opacity:.4;
+
+    border:none;
+    cursor:pointer;
+}
+
+.bg{
+    pointer-events:none;
+}
+
+.successText{
+    display:block;
+    font-size:50px;
+}
+
+.subText{
+    display:block;
+    font-size:20px;
+    margin-top:10px;
+}
